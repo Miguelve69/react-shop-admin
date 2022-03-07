@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import endPoints from "@services/api";
 
-const useFetch = (endPoint) => {
+const useFetch = (endPoints) => {
     const [data, setData] = useState([]);
 
     async function fetchData() {
-        const response = await axios.get(endPoint);
+        const response = await axios.get(endPoints);
         setData(response.data);
     }
 
